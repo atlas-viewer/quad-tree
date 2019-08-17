@@ -1,0 +1,28 @@
+{
+  "name": "@atlas-viewer/quad-tree",
+  "version": "0.2.1",
+  "main": "dist/umd/@atlas-viewer/quad-tree.js",
+  "module": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "author": "Stephen Fraser <stephen.fraser@digirati.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "fesk-build --cjs --umd && tsc -p ./ --emitDeclarationOnly",
+    "start": "fesk-start --cjs --noServer",
+    "build-types": "tsc -p ./ --emitDeclarationOnly",
+    "prepublish": "NODE_ENV=production fesk-build --cjs --umd && tsc -p ./ --emitDeclarationOnly"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@fesk/scripts": "^1.2.1"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "fesk": {
+    "typescript": true
+  }
+}
